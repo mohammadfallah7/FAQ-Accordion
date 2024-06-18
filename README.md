@@ -24,7 +24,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [Github](https://github.com/mohammadfallah7/FAQ-Accordion.git)
-- Live Site URL: [live site](https://mohammadfallah7.github.io/FAQ-Accordion/)
+- Live Site URL: [live site](https://faq-accordion-delta-liart.vercel.app/)
 
 ## My process
 
