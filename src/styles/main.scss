@@ -1,3 +1,103 @@
+@use "base";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: base.$work-sans;
+}
+
+body {
+  background-color: base.$light-pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -10;
+  margin: 0 auto;
+}
+
+#accordion {
+  background-color: base.$white;
+  width: 85%;
+  max-width: base.$screen-sm;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__picture {
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+
+    @include base.md {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: base.$dark-purple;
+
+    @include base.md {
+      font-size: 3rem;
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &__action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: start;
+      gap: 5rem;
+      color: base.$dark-purple;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: base.$grayish-purple;
+      }
+    }
+
+    &__panel {
+      color: base.$grayish-purple;
+    }
+  }
+}

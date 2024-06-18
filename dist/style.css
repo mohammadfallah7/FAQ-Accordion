@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Work Sans";
+
+  src: url(../../assets/fonts/static/WorkSans-Regular.ttf);
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Work Sans";
+
+  src: url(../../assets/fonts/static/WorkSans-SemiBold.ttf);
+
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Work Sans";
+
+  src: url(../../assets/fonts/static/WorkSans-Bold.ttf);
+
+  font-weight: 700;
+}
+
 /*
 ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
@@ -2234,6 +2258,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2404,6 +2434,109 @@ video {
 
 .forced-color-adjust-none {
   forced-color-adjust: none;
+}
+
+* {
+  font-family: "Work Sans";
+}
+
+body {
+  background-color: #f9f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -10;
+  margin: 0 auto;
+}
+
+#accordion {
+  background-color: #ffffff;
+  width: 85%;
+  max-width: 640px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__picture {
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .header__picture {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.header__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2f1533;
+}
+
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.accordion__item__action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  gap: 5rem;
+  color: #2f1533;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.accordion__item__action:hover {
+  color: #8c6991;
+}
+
+.accordion__item__panel {
+  color: #8c6991;
 }
 
 @media (min-width: 640px) {

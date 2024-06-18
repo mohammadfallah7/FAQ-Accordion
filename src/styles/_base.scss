@@ -1,0 +1,38 @@
+// Colors
+$white: #ffffff;
+$light-pink: #f9f0ff;
+$grayish-purple: #8c6991;
+$dark-purple: #2f1533;
+
+// Breakpoints
+$screen-sm: 640px;
+$screen-md: 768px;
+
+// Responsive
+@mixin md {
+  @media screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
+// Font Family
+$work-sans: "Work Sans";
+
+// Font Face
+@font-face {
+  font-family: $work-sans;
+  src: url(../../assets/fonts/static/WorkSans-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $work-sans;
+  src: url(../../assets/fonts/static/WorkSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: $work-sans;
+  src: url(../../assets/fonts/static/WorkSans-Bold.ttf);
+  font-weight: 700;
+}
